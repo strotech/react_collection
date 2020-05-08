@@ -1,0 +1,33 @@
+This is an expo app. 
+
+Connecting to Google Maps API
+=========================
+1. Rename the app_template.json to app.json
+2. Update the apiKey field in that file to connect to your own Google Maps API.
+
+
+To run the app in the connected emulator, run the following commands:
+1. npm start
+2. hit a for android, i for ios.
+
+UBUNTU
+========================
+To run android studio
+---------------------------
+add the below entry to bashrc
+export ANDROID_HOME='/usr/local/android-studio/bin'
+
+then invoke the studio by running studio.sh from anywhere
+
+To list and run the emulators
+---------------------------
+cd ~/Android/Sdk/tools/bin
+./avdmanager list avd
+cd ~/Android/Sdk/emulator
+./emulator -avd NAME_OF_YOUR_DEVICE
+./emulator -avd Pixel_2_API_29
+
+For debugging in Wi-Fi
+----------------------------------
+Replace localhost with current local ip in -  node_modules/react-native/Libraries/Core/Devtools/setUpDeveloperTools.js
+
